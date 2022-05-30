@@ -122,7 +122,14 @@
                                             <option value="3">Junior</option>
                                           </select>
                                         </div>
-                                        <div class="col-12" id="alert"></div>
+                                        <!-- OTRA FORMA DE IMPLEMENTACIÓN -->
+                                        <!-- <div class="col-12" id="alert"></div> -->
+                                        <div class="col-12 my-3">
+                                            <div class="alert alert-primary" role="alert">
+                                                Total a Pagar: $<span id="resultado"></span>
+                                            </div>
+                                        </div>
+
                                         <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
                                             <button onclick="limpiar()" class="btn btn-green-light py-2 bd-highlight col-12" type="button">Borrar</button>
                                         </div>

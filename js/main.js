@@ -30,10 +30,12 @@ function calcularTotalApagar() {
     }
 
     if (estado == true) {
-        mostrtarAlert('Total a Pagar: $' + descuento, 'primary');
-    } else {
-        mostrtarAlert('Existen campos sin rellenar...', 'danger');
+        /*  mostrtarAlert('Total a Pagar: $' + descuento, 'primary'); */
+        document.getElementById("resultado").innerHTML = descuento;
     }
+    /* else {
+           mostrtarAlert('Existen campos sin rellenar...', 'danger');
+       } */
 
     console.log("Total a pagar: " + descuento);
 
@@ -48,13 +50,14 @@ function verificarDatos(cant, cat) {
     }
     return estado;
 }
-
-function mostrtarAlert(message, type) {
+/* OTRA FORMA DE IMPLEMENTACIÓN */
+/* function mostrtarAlert(message, type) {
     var wrapper = document.createElement('div');
     wrapper.innerHTML = '<div  class="alert alert-' + type + ' alert-dismissible" role = "alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
     alertPlaceholder.append(wrapper);
-}
+} */
 
 function limpiar() {
     form.reset();
+    document.getElementById("resultado").innerHTML = 0;
 }
